@@ -22,7 +22,7 @@ bool contains(char* charArray, char* _c) {
 int main(int argc, char* argv[])
 {
     char alreadyCounted[100];
-	char string[100];
+    char string[100];
     int countOffset = 0;
 
     if (argc > 1) {
@@ -30,7 +30,10 @@ int main(int argc, char* argv[])
             string[i] = argv[1][i];
         }
     }
-    else { fgets(string, 100, stdin); }
+    else {
+        printf("input string: ");
+	fgets(string, 100, stdin);
+    }
 
     char* t;
     for (t = string; (*t != '\0') && (*t != '\n'); t++) {
