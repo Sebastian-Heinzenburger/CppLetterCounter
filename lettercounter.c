@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
   if (argc > 1)
     input = argv[1];
   else
-    scanf("%ms", &input);
+    scanf("%m[^\n]s", &input);
 
   // increments the value in chars[] at the character index
   for (char *c = input; *c != '\0' && *c != '\n'; c++) {
